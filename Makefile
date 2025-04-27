@@ -20,8 +20,8 @@ stop: ##@setup stop containers
 .PHONY: stop
 
 cli: ##@setup run cli
-	echo "Execute 'psql -d testdb -u testuser'"
-	echo "Password: testpassword"
+	@echo "Execute 'psql -d testdb -u testuser'"
+	@echo "Password: testpassword"
 	docker compose exec -it db bash
 .PHONY: cli
 
