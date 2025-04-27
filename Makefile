@@ -19,6 +19,10 @@ stop: ##@setup stop containers
 	docker compose stop
 .PHONY: stop
 
+cli: ##@setup run cli
+	docker compose exec -it db bash
+.PHONY: cli
+
 # Add the following 'help' target to your Makefile
 # And add help text after each target name starting with '\#\#'
 # A category can be added with @category
