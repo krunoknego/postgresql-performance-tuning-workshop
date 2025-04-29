@@ -68,3 +68,26 @@ EXPLAIN SELECT * FROM sales WHERE country = 'USA';
 - You should see `Seq Scan on sales_usa`
 - NOT a `Seq Scan` on the parent `sales`!
 
+## Exercise 7
+
+Create a default partition for other countries.
+
+```sql
+CREATE TABLE sales_default PARTITION OF sales DEFAULT;
+```
+
+Add some data to the default partition.
+
+```sql
+INSERT INTO sales (product_name, country, sale_amount) VALUES
+('Tablet', 'Mexico', 600.00),
+('Monitor', 'UK', 300.00);
+```
+
+Explain the query.
+
+```sql
+EXPLAIN SELECT * FROM sales WHERE country = 'Mexico';
+```
+
+
