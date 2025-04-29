@@ -36,6 +36,6 @@ ORDER BY calls DESC;
 
 Find the queries that were called the most number of times
 
-## Task 5 — Find Which Queries Cause the Most Shared Buffer Reads
+## Exercise 5
 
 Find the queries that use the buffer cache the most.
